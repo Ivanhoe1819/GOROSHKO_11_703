@@ -1,27 +1,27 @@
 package ru.itis;
+
 import java.util.Scanner;
-//10a
+
 public class Main {
 
     public static void main(String[] args) {
         Scanner a = new Scanner(System.in);
-        int x , k , n, p;
-        double Sum = 0, z=1,c=1;
+        int  k , n, q=0,w=0,x;
+        double Sum = 0,z=1;
         System.out.println("Input n");
         n=a.nextInt();
         System.out.println("Input x");
         x=a.nextInt();
-        p = x;
-        for (k=0; k <= n; k++) {
-            if (k == 0) {
-                z = x;
+        for (k = 1; k <=2*n; k++) {
+            if(k%2==1) {
+                q = q+k;
+                z = z * (x / q);
             }
-            else {
-                c = c*(-p)/k;
-                z = z*c/(2*k+1);
+            else{
+                w = w+k;
+                z = z * (x / w);
             }
-            p = p*x*x;
-            Sum = Sum + z;
+            Sum = Sum +z;
         }
         System.out.println(Sum);
     }
