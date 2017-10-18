@@ -4,7 +4,7 @@ public class TwelveB {
         Scanner a = new Scanner(System.in);
         int n=1, p = 1;
         double eps = 0.0001;
-        double G = 0 , t=1, x;
+        double G = 0 , t, x;
         System.out.println("Entering x");
         x = a.nextDouble();
         t=x;
