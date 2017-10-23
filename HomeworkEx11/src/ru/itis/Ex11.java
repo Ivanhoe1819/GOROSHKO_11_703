@@ -1,6 +1,6 @@
 package ru.itis;
 
-import java.util.Scanner;
+import java.util.Scanner;// Б
 
 public class Ex11 {
     public static void main(String[] args) {
