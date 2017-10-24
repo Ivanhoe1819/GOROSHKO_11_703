@@ -8,8 +8,8 @@ public class Nine3 {//          9В ДОМАШНЯЯ РАБОТА
         System.out.println("Entering n");
         n = a.nextInt();
         for ( m = 0; m <= n; m++){
-            Sum = Sum + (k / ((2 * m + 1)*p));
-            p = p * 3;
+            Sum = Sum + k*p;
+            p *=(2*m-1) / ((2 * m + 1)*3);
             k = -k;
         }
         System.out.println(Sum);
