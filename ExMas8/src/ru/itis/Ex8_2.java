@@ -1,4 +1,4 @@
-package ru.itis;
+package ru.itis;//-
 
 import java.util.Scanner;
 import java.util.Random;
@@ -42,6 +42,6 @@ public class Ex8_2 {
             }
         }
         System.out.println();
-        System.out.print(card);
+        System.out.print(card);  //так включает или нет?
     }
 }
