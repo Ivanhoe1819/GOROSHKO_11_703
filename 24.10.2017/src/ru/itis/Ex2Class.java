@@ -13,7 +13,7 @@ public class Ex2Class {
         n = q.nextInt();
         int[] a = new int[n];
         Random ra = new Random();
-        for (int i = 1; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             a[i] = ra.nextInt(100);
             System.out.print(a[i] + ", ");
             if (a[i] < min) {
