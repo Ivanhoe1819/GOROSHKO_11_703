@@ -1,4 +1,4 @@
-package ru.itis;
+package ru.itis;//-
 
 import java.util.Scanner;
 
@@ -24,7 +24,7 @@ public class Ex24_B { // A
             c0 = c1;
             b1 = bk;
             c1 = ck;
-            bk = b0 * b1 - c0 * c1;
+            bk = b0 * b1 - c0 * c1;  //неправильно
             ck = c0 * b1 + c1 * b0;
             k++;
             t=-t;
