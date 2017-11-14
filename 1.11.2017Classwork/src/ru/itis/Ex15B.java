@@ -23,7 +23,7 @@ public class Ex15B {
                 v[k]++;
                 k = 0;
             }
-            if (i == n - 1) {
+            if (i == n - 1) {//??
                 v[k]++;
             }
         }
