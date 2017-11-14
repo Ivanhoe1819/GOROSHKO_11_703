@@ -1,4 +1,4 @@
-package ru.itis;
+package ru.itis;//См. замечания у Синицина
 
 import java.util.Scanner;
 
