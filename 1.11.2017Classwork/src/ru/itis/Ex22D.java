@@ -24,12 +24,12 @@ public class Ex22D {
         for (int i = 0; i < n; i++) {
             boolean e = true;
             for (int k = 0; k < n; k++) {
-                if (a[i] == a[k] && i != k && a[i] != b[k]) {
+                if (a[i] == a[k] && i != k && a[i] != b[k] && e) {
                     b[i] = a[i];
                     e = false;
                 }
             }
-            if (e == true) {
+            if (e) {
                 t++;
             }
         }
