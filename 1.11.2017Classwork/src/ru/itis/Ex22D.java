@@ -1,32 +1,39 @@
 package ru.itis;//-
 /* алгоритм должен быть посторен на программировании кванторной формулы
    этот решает неверно, см. пример внизу */
+
 import java.util.Random;
 import java.util.Scanner;
 
 public class Ex22D {
     public static void main(String[] args) {
         Scanner q = new Scanner(System.in);
-        int n,t=0;
+        int n, t = 0;
         System.out.println("Entering N");
         n = q.nextInt();
         int[] a = new int[n];
-        Random R = new Random();   //прописные буквы только у имени класса и у констант
+        int[] b = new int[n];
+        Random r = new Random();   //прописные буквы только у имени класса и у констант
         for (int i = 0; i < n; i++) {
-            a[i] = R.nextInt(50);
+            a[i] = q.nextInt();//r.nextInt(50);
         }
         for (int i = 0; i < n; i++) {
             System.out.print(a[i] + " ");
         }
         System.out.println();
         for (int i = 0; i < n; i++) {
+            boolean e = true;
             for (int k = 0; k < n; k++) {
-                if (a[i] == a[k] && i != k) {
-                    t++;
+                if (a[i] == a[k] && i != k && a[i] != b[k]) {
+                    b[i] = a[i];
+                    e = false;
                 }
             }
+            if (e == true) {
+                t++;
+            }
         }
-        t=n-t;
+        t = n - t;
         System.out.println(t);
     }
 }

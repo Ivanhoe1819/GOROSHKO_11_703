@@ -20,7 +20,6 @@ public class Ex5 {
         Scanner S = new Scanner(System.in);
         int matrix[][];
         int n, m, z = 0, q = 0, p = 0;
-        boolean f = false, g = false, j = false, h = false;
         System.out.println("Размер матрицы");
         n = S.nextInt();
         m = S.nextInt();
@@ -41,11 +40,13 @@ public class Ex5 {
             if (q == z) {
                 p++;
                 q = 0;
+            } else {
+                break;
             }
         }
-        if (p == matrix.length) {
-            f = true;
-            System.out.println(f);
+        if (p != matrix.length) {
+            System.out.println("Обычная");
+            return;
         }
         q = 0;
         p = 0;
@@ -56,19 +57,21 @@ public class Ex5 {
             if (q == z) {
                 p++;
                 q = 0;
+            } else {
+                break;
             }
         }
-        if (p == matrix.length) {
-            g = true;
-            System.out.println(g);
+        if (p != matrix.length) {
+            System.out.println("Обычная");
+            return;
         }
         q = 0;
         for (int i = 0; i < matrix.length; i++) {
             q = q + matrix[i][i];
         }
-        if (q == z) {
-            h = true;
-            System.out.println(h);
+        if (q != z) {
+            System.out.println("Обычная");
+            return;
         }
         q = 0;
         int k = m - 1;
@@ -76,14 +79,10 @@ public class Ex5 {
             q = q + matrix[i][k];
             k--;
         }
-        if (q == z) {
-            j = true;
-            System.out.println(j);
+        if (q != z) {
+            System.out.println("Обычная");
+            return;
         }
-        if (f == true && g == true && h == true && j == true) {
-            System.out.println("МАГИЧЕСКИЙ КВАДРАТ!!!");
-        } else {
-            System.out.println("Обычная матрица");
-        }
+        System.out.println("Магический квадрат");
     }
 }

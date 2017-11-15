@@ -22,11 +22,9 @@ public class Ex15B {
             if (a[i] < a[i - 1]) {
                 v[k]++;
                 k = 0;
-            }
-            if (i == n - 1) {//??
-                v[k]++;
-            }
+            }//??
         }
+        v[k]++;
         System.out.println();
         for (int i = 0; i < n; i++) {
             System.out.print(v[i] + " ");

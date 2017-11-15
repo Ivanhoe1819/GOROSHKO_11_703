@@ -27,10 +27,8 @@ public class Ex15A {
                 k = 1;
                 c++;
             }
-            if (i == n - 1) {
-                v[c] = k;
-            }
         }
+        v[c] = k;
         min = v[0];
         max = v[0];
         for (int i = 1; i < n; i++) {
