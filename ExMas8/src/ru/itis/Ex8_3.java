@@ -64,8 +64,6 @@ public class Ex8_3 {
         {
             if (b1[k] == b2[k] && b1[k] == 1) {
                 System.out.print("0"+ " ");
-            } else {
-                System.out.print("0"+ " "); //почему печать?
             }
         }
 
