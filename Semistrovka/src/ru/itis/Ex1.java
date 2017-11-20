@@ -7,7 +7,7 @@ public class Ex1 {
     public static void main(String[] args) {
         Scanner q = new Scanner(System.in);
         int j, n;
-        double b, a1, a2, a3, x, h, F, Fi = 100, NeFi = 0;
+        double b, x, h, F, Fi = 100, NeFi = 0;
         System.out.println("Entering N");
         n = q.nextInt();
         double[] aS = new double[4];
@@ -19,7 +19,6 @@ public class Ex1 {
         for (int i = 1; i < 4; i++) {
             aS[i] = q.nextDouble();
         }
-        double[] a = new double[n];
         for (int i = 1; i < 4; i++) {
             for (j = 1; j <= n; j++) {
                 x = b + j * h;
@@ -33,6 +32,7 @@ public class Ex1 {
                     System.out.println();
                     System.out.println("Fi "+ Fi);
                     System.out.println("NeFi "+ NeFi);
+                    NeFi = 0;
                 }
             }
 
