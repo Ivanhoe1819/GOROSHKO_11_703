@@ -1,4 +1,4 @@
-package ru.itis;
+package ru.itis;//+-
 
 import java.util.Random;
 import java.util.Scanner;
@@ -38,14 +38,14 @@ public class Ex5 {
                 q = q + matrix[i][k];
             }
             if (q == z) {
-                p++;
+                p++;           //very bad method
                 q = 0;
             } else {
                 break;
             }
         }
         if (p != matrix.length) {
-            System.out.println("Обычная");
+            System.out.println("Обычная");  
             return;
         }
         q = 0;
