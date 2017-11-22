@@ -28,14 +28,13 @@ public class Ex1 {
                 }
                 NeFi = NeFi + F;
                 System.out.print(F + " ");
-                if(j==n){
-                    System.out.println();
-                    System.out.println("Fi "+ Fi);
-                    System.out.println("NeFi "+ NeFi);
-                    NeFi = 0;
-                }
-            }
 
+            }
+            System.out.println();
+            System.out.println("Fi "+ Fi);
+            System.out.println("NeFi "+ NeFi);
+            NeFi = 0;
+            Fi=100;
         }
     }
 }

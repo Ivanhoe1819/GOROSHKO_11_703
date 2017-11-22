@@ -23,10 +23,11 @@ public class Ex3 {
             b[j] = (Math.log(1 + (b[0] * b[0]))) / (Math.log(1 + (a[0] * a[0])));
         }
         for (j = 1; j < n - 1; j++) {
-            for (int k = 1; k < n - 1 && !f; k++) {
+            for (int k = 1; k < n - 1; k++) {
                 F = a[j] - b[k];
                 if (F < eps) {
                     f = true;
+                    break;
                 }
             }
             if (f) {
