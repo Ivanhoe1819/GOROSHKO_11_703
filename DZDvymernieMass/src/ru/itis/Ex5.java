@@ -45,7 +45,7 @@ public class Ex5 {
             }
         }
         if (!p) {
-            System.out.println("Обычная");  
+            System.out.println("Обычная");
             return;
         }
         q = 0;
