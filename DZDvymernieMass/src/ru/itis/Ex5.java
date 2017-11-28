@@ -19,12 +19,11 @@ public class Ex5 {
         Random R = new Random();
         Scanner S = new Scanner(System.in);
         int matrix[][];
-        int n, m, z = 0, q = 0;
+        int n, z = 0, q = 0;
         boolean p = true;
         System.out.println("Размер матрицы");
         n = S.nextInt();
-        m = S.nextInt();
-        matrix = new int[n][m];
+        matrix = new int[n][n];
         for (int i = 0; i < matrix.length; i++) {
             for (int k = 0; k < matrix[i].length; k++) {
                 matrix[i][k] = S.nextInt();//R.nextInt(100);
@@ -38,11 +37,11 @@ public class Ex5 {
             for (int k = 0; k < matrix.length; k++) {
                 q = q + matrix[i][k];
             }
-            if (q == z) {
-            } else {
+            if (q != z) {
                 p = false;
                 break;
             }
+            q=0;
         }
         if (!p) {
             System.out.println("Обычная");
@@ -53,11 +52,11 @@ public class Ex5 {
             for (int k = 0; k < matrix.length; k++) {
                 q = q + matrix[k][i];
             }
-            if (q == z) {
-            } else {
+            if (q != z) {
                 p = false;
                 break;
             }
+            q=0;
         }
         if (!p) {
             System.out.println("Обычная");
@@ -72,7 +71,7 @@ public class Ex5 {
             return;
         }
         q = 0;
-        int k = m - 1;
+        int k = n - 1;
         for (int i = 0; i < matrix.length && k >= 0; i++) {
             q = q + matrix[i][k];
             k--;
