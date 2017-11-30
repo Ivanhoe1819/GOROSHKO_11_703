@@ -4,7 +4,8 @@ public class RationalFraction {
     int x, y;
 
     RationalFraction() {
-        x = y = 0;
+        x = 0;
+        y = 1;
     }
 
     RationalFraction(int x, int y) {

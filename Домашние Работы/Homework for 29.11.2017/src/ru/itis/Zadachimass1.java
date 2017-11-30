@@ -6,18 +6,25 @@ import java.util.Scanner;
 public class Zadachimass1 {
 
     public static void main(String[] args) {
-        Random R = new Random();
-        Scanner S = new Scanner(System.in);
+        Random r = new Random();
+        Scanner s = new Scanner(System.in);
         int matrix[][];
-        int n, m, t, min, p = 0;
-        boolean f = false;
+        int n, m, min, q, p;
         System.out.println("Размер матрицы");
-        n = S.nextInt();
-        m = S.nextInt();
+        n = s.nextInt();
+        m = s.nextInt();
+        int[] a = new int[m];
+        for (int i = 0; i < m; i++) {
+            a[i] = r.nextInt(100);
+        }
+        for (int i = 0; i < m; i++) {
+            System.out.print(a[i] + " ");
+        }
+        System.out.println("Заглушка");
         matrix = new int[n + 1][m];
         for (int i = 0; i < n; i++) {
             for (int k = 0; k < matrix[i].length; k++) {
-                matrix[i][k] = R.nextInt(100);
+                matrix[i][k] = r.nextInt(100);
             }
         }
         for (int i = 0; i < n; i++) {
@@ -29,24 +36,36 @@ public class Zadachimass1 {
         System.out.println();
         for (int i = (matrix.length - 1); i >= 0; i--) {
             min = matrix[i][0];
-            t = i;
-            for (int j = i - 1; j >= 0; j--) {
-                if (matrix[j][0] <= min) {
-                    min = matrix[j][0];
-                    t = j;
+            p = i;
+            for (int k = i - 1; k >= 0; k--) {
+                if (matrix[k][0] <= min) {
+                    min = matrix[k][0];
+                    p = k;
                 }
             }
-            t = matrix[i][0];
-            matrix[i][0] = matrix[t][0];
-            matrix[t][0] = t;
+            q = matrix[p][0];
+            matrix[p][0] = matrix[i][0];
+            matrix[i][0] = q;
         }
-        for (int i = 0; i < n; i++) {
+        for (int i = n; i >= 0; i--) {
+            if (a[0] > matrix[i - 1][0]) {
+                for (int k = 0; k < matrix[i].length; k++) {
+                    q = matrix[i - 1][k];
+                    matrix[i - 1][k] = matrix[i][k];
+                    matrix[i][k] = q;
+                }
+            } else {
+                for (int k = 0; k < matrix[i].length; k++) {
+                    matrix[i][k] = a[k];
+                }
+                break;
+            }
+        }
+        for (int i = 0; i < matrix.length; i++) {
             for (int k = 0; k < matrix[i].length; k++) {
                 System.out.print(matrix[i][k] + " ");
             }
             System.out.println();
-
         }
-        System.out.println(p);
     }
 }
