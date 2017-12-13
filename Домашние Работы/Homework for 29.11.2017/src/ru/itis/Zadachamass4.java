@@ -1,4 +1,4 @@
-package ru.itis;
+package ru.itis;//-
 
 import java.util.Scanner;
 import java.util.Random;
@@ -26,7 +26,7 @@ public class Zadachamass4 {
     public static void simullation(int matrix[][]) {
         boolean d = false;
         for (int i = 0; i < matrix.length - 1; i++) {
-            for (int k = i + 1; k < matrix.length; k++) {
+            for (int k = i + 1; k < matrix.length; k++) {  //why such indexes?
                 for (int j = 0; j < matrix.length; j++) {
                     if (matrix[i][j] == matrix[j][k]) {
                     } else {
