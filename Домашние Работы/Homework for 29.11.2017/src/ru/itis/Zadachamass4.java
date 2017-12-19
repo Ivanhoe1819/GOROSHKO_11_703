@@ -1,4 +1,4 @@
-package ru.itis;
+package ru.itis;//-
 
 import java.util.Scanner;
 import java.util.Random;
@@ -25,16 +25,21 @@ public class Zadachamass4 {
 
     public static void simullation(int matrix[][]) {
         boolean d = false;
-        for (int i = 0; i < matrix.length; i++) {// Очень сильно сглупил, использовал элементы из предыдущей задачи, попала лишняя строка. А Абрамский предупреждал...
-            for (int j = 0; j < matrix.length; j++) {
-                if (matrix[i][j] == matrix[j][i]) {
-                } else {
+        for (int i = 0; i < matrix.length - 1; i++) {
+            for (int k = i + 1; k < matrix.length; k++) {  //why such indexes?
+                for (int j = 0; j < matrix.length; j++) {
+                    if (matrix[i][j] == matrix[j][k]) {
+                    } else {
+                        d = true;
+                        break;
+                    }
+                }
+                if (!d) {
                     d = true;
                     break;
                 }
             }
             if (d) {
-            } else {
                 System.out.println("Есть");
                 return;
             }

@@ -28,20 +28,22 @@ public class Zadachimass3 {
         for (int i = 0; i < matrix.length - 1; i++) {
             for (int k = i + 1; k < matrix.length; k++) {//В данном случае необходимо, т.к иначе не просчитать последующие строки (По-крайней мере, я не нашел альтернативы. Извините
                 for (int j = 0; j < matrix[i].length; j++) {
-                    if (matrix[i][j] == matrix[k][j]) {
+                    if (matrix[i][j] == matrix[k][j]) {   //why so strange? Such do not write!
                     } else {
                         d = true;
                         break;
                     }
                 }
-                if (!d) {
+                if (d) {        //why so strange? Such do not write!  if (B) S1; or if (B) S1; else s2;
+                } else {
                     System.out.println("Есть");
                     return;
                 }
-                d=false;
+                d = false;
+
             }
+            System.out.println("Нет");
         }
-        System.out.println("Нет");
     }
 
     public static void main(String[] args) {

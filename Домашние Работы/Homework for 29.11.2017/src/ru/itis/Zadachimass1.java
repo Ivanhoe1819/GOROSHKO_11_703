@@ -51,6 +51,7 @@ public class Zadachimass1 {
             if (a[0] > matrix[i - 1][0]) {
                 for (int k = 0; k < matrix[i].length; k++) {
                     q = matrix[i - 1][k];//Замена... Не нашел альтернативы. Извините
+                    q = matrix[i - 1][k];                       //why?
                     matrix[i - 1][k] = matrix[i][k];
                     matrix[i][k] = q;
                 }
