@@ -2,10 +2,10 @@ package ru.itis;
 
 import java.util.Scanner;
 
-public class WEq {
+public class Main {
 
     public static void main(String[] args) {
-        String words[] = {"бээ!", "б", "", "бэээээ!", "бэ", "!"};
+        String words[] = {"00001111", "10", "", "11110", "1", "!"};
 
         for (String word : words) {
             System.out.println(isF(word));

@@ -26,7 +26,7 @@ public class Ex10 {
 
     public static void compare(double matrixA[][], double matrixB[][]) {
         for (int i = 0; i < matrixA.length; i++) {
-            if (matrixA[i][1] > matrixA[i][2]) {
+            if (matrixA[i][1] >= matrixA[i][2]) {
                 for (int k = 0; k < matrixA[i].length; k++) {
                     matrixB[i][k] = Math.atan(1 + matrixA[i][k]) - 3 * matrixA[i][k];
                 }

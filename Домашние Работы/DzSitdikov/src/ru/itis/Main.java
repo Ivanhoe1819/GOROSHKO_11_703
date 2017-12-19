@@ -1,8 +1,11 @@
 package ru.itis;
 
+import java.lang.String;
+
+
 public class Main {
     public static void main(String[] args) {
-        String s[] = {"бээ!", "б", "", "бэээээ!", "бэ", "!"};
+        String s[] = {"0112", "0", "", "01111112", "01", "3"};
         for (int i = 0; i < s.length; i++) {
             System.out.println(isGoodWordBySwitch(s[i]));
         }
@@ -12,8 +15,29 @@ public class Main {
         char l[] = ar.toCharArray();
         boolean f = true;
         int q = 0, i = 0;
-        while (f && i < l.length) {
-            switch (q) {
+        int[][] m = {{1, 4, 4},
+                {4, 2, 4},
+                {4, 2, 3},
+                {4, 4, 4},
+                {4, 4, 4}};
+        int a = ar.length();
+        if (a < 3) {
+            System.out.println("Все плохо");
+            f = false;
+        }
+        while (i < 1 && f) {
+            int t = l[i]-'0';
+            q = m[q][t];
+            i++;
+            if (q == 4) {
+                f = false;
+            }
+        }
+        if (q == 3) {
+            System.out.println("Все ок");
+        }
+        return f;
+            /*switch (q) {
                 case 0:
                     if (l[i] == 'б') {
                         q++;
@@ -55,5 +79,6 @@ public class Main {
         }
         if (q != 4) f = false;
         return f;
+    }*/
     }
 }

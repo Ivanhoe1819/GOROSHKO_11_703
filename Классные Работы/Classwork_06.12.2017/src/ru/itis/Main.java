@@ -9,11 +9,7 @@ public class Main {
         boolean f = true;
         Scanner s = new Scanner(System.in);
         String a = s.nextLine();
-        switch (4) {
-            case 1:
-                chtoto(a.charAt(z), z, s.next());
         }
-    }
 
 
     public static void chtoto(char a, int z, char e) {

@@ -25,22 +25,20 @@ public class Zadachamass4 {
 
     public static void simullation(int matrix[][]) {
         boolean d = false;
-        for (int i = 0; i < matrix.length - 1; i++) {
-            for (int k = i + 1; k < matrix.length; k++) {
-                for (int j = 0; j < matrix.length; j++) {
-                    if (matrix[i][j] == matrix[j][k]) {
-                    } else {
-                        d = true;
-                        break;
-                    }
-                }
-                if (d) {
+        for (int i = 0; i < matrix.length; i++) {// Очень сильно сглупил, использовал элементы из предыдущей задачи, попала лишняя строка. А Абрамский предупреждал...
+            for (int j = 0; j < matrix.length; j++) {
+                if (matrix[i][j] == matrix[j][i]) {
                 } else {
-                    System.out.println("Есть");
-                    return;
+                    d = true;
+                    break;
                 }
-                d = false;
             }
+            if (d) {
+            } else {
+                System.out.println("Есть");
+                return;
+            }
+            d = false;
         }
         System.out.println("Нет");
     }

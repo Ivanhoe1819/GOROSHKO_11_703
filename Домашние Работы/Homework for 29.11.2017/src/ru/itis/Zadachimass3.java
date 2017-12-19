@@ -26,7 +26,7 @@ public class Zadachimass3 {
     public static void simullation(int matrix[][]) {
         boolean d = false;
         for (int i = 0; i < matrix.length - 1; i++) {
-            for (int k = i + 1; k < matrix.length; k++) {
+            for (int k = i + 1; k < matrix.length; k++) {//В данном случае необходимо, т.к иначе не просчитать последующие строки (По-крайней мере, я не нашел альтернативы. Извините
                 for (int j = 0; j < matrix[i].length; j++) {
                     if (matrix[i][j] == matrix[k][j]) {
                     } else {
@@ -34,8 +34,7 @@ public class Zadachimass3 {
                         break;
                     }
                 }
-                if (d) {
-                } else {
+                if (!d) {
                     System.out.println("Есть");
                     return;
                 }
