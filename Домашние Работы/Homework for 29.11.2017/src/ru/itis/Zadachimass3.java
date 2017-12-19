@@ -57,3 +57,4 @@ public class Zadachimass3 {
         simullation(matrix);
     }
 }
+//P.S.:Извините, ДЗ на 13 не смог, с вашего разрешения, отправлю позже.
